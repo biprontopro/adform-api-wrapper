@@ -19,7 +19,7 @@ Getting Started
 ```python
 import os
 
-from adform-api-wrapper import AdformApi
+from adform_api_wrapper import AdformApi
 
 ADFORM_CLIENT_ID = os.getenv('ADFORM_CLIENT_ID')
 ADFORM_CLIENT_SECRET = os.getenv('ADFORM_CLIENT_SECRET')
