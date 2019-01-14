@@ -10,7 +10,6 @@ from setuptools import find_packages, setup, Command
 
 # Package meta-data.
 NAME = 'adform_api_wrapper'
-FOLDER_NAME = 'adform_api_wrapper'
 DESCRIPTION = 'Python Adform API wrapper'
 URL = 'https://github.com/Sajjadhosn/adform-api-wrapper'
 EMAIL = 'sajjad.hosseini@futurice.com'
@@ -35,7 +34,7 @@ except FileNotFoundError:
 # Load the package's __version__.py module as a dictionary.
 about = {}
 if not VERSION:
-    with open(os.path.join(here, FOLDER_NAME, '__version__.py')) as f:
+    with open(os.path.join(here, NAME, '__version__.py')) as f:
         exec(f.read(), about)
 else:
     about['__version__'] = VERSION
