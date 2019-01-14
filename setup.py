@@ -18,7 +18,7 @@ REQUIRES_PYTHON = '>=3.7.2'
 VERSION = None
 
 REQUIRED = [
-    'requests',
+    'requests>=2.21.0',
 ]
 
 EXTRAS = {}
