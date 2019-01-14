@@ -9,7 +9,7 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'adform-api-wrapper'
+NAME = 'adform_api_wrapper'
 FOLDER_NAME = 'adform_api_wrapper'
 DESCRIPTION = 'Python Adform API wrapper'
 URL = 'https://github.com/Sajjadhosn/adform-api-wrapper'

@@ -10,7 +10,7 @@ Installation
 ------------
 
 ```
-pipenv install adform-api-wrapper==1.0.0
+pipenv install adform_api_wrapper
 ```
 
 Getting Started
