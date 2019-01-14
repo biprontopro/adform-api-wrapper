@@ -1,4 +1,4 @@
-from .api import *
+from .api import AdformApi
 
 
 __all__ = [
