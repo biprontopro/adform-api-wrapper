@@ -26,8 +26,8 @@ ADFORM_CLIENT_SECRET = os.getenv('ADFORM_CLIENT_SECRET')
 
 adform_api = AdformApi(ADFORM_CLIENT_ID, ADFORM_CLIENT_SECRET)
 # https://api.adform.com/v1/help/buyer/campaigns#!/Campaigns/get_v1_buyer_campaigns
-all_campaigns = adform_api.get('/buyer/campaigns')
-print(all_campaigns)
+all_campaigns_response = adform_api.get('/buyer/campaigns')
+print(all_campaigns_response.json())
 ```
 
 Features
