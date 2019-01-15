@@ -14,7 +14,7 @@ DESCRIPTION = 'Python Adform API wrapper'
 URL = 'https://github.com/Sajjadhosn/adform-api-wrapper'
 EMAIL = 'sajjad.hosseini@futurice.com'
 AUTHOR = 'Sajjad Hosseini'
-REQUIRES_PYTHON = '>=3.7.2'
+REQUIRES_PYTHON = '>=3.7'
 VERSION = None
 
 REQUIRED = [
