@@ -59,6 +59,7 @@ class AdformApi(object):
     def _api_scope(self):
         scope_list = [
             'buyer.campaigns.api',
+            'buyer.advertisers',
             'buyer.rtb.lineitem',
             'eapi',
         ]
