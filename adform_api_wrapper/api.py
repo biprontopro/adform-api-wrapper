@@ -12,13 +12,22 @@ class AdformApi(object):
     '''
     Low-level API wrapper
     '''
-    def __init__(self, client_id, client_secret):
+    def __init__(self, client_id, client_secret, scope_list=None):
         self.client_id = client_id
         self.client_secret = client_secret
         self.authentication_base_url = 'https://id.adform.com'
         self.api_base_url = 'https://api.adform.com'
         self.api_version = 'v1'
         self.session = requests.Session()
+        if scope_list is None:
+            self.scope_list = [
+                'buyer.campaigns.api',
+                'buyer.advertisers',
+                'buyer.rtb.lineitem',
+                'eapi',
+            ]
+        else:
+            self.scope_list = scope_list
 
     def get(self, path, params=None):
         return self._call('GET', path, params=params)
@@ -57,14 +66,8 @@ class AdformApi(object):
         return response
 
     def _api_scope(self):
-        scope_list = [
-            'buyer.campaigns.api',
-            'buyer.advertisers',
-            'buyer.rtb.lineitem',
-            'eapi',
-        ]
         scope_base_url = '{api_base_url}/scope/'.format(api_base_url=self.api_base_url)
-        scope_list_full_urls = [scope_base_url + scope for scope in scope_list]
+        scope_list_full_urls = [scope_base_url + scope for scope in self.scope_list]
         return ' '.join(scope_list_full_urls)
 
     def _authenticate(self):
