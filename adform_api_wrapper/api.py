@@ -1,8 +1,7 @@
 import logging
 
 import requests
-
-from . import status
+import status
 
 
 logger = logging.getLogger(__name__)
